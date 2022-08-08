@@ -285,3 +285,39 @@ $Raleway: 'Raleway', sans-serif;
         }
     }
 }
+.order {
+    padding-top: 120px;
+    padding-bottom: 150px;
+    background: #272733;
+    background-image: url("../images/map.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__inner {
+
+    }
+
+    &__title {
+        text-align: center;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 43px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 30px;
+        span {
+            color: #3E9CDC;
+        }
+    }
+
+    &__subtitle {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        color: #BBBBBB;
+        margin-bottom: 80px;
+    }
+}
