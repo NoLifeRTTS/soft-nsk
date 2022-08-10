@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Test</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -25,7 +24,7 @@
                     <a href="#" class="header__link">Бизнес</a>
                     <a href="#" class="header__link">О нас</a>
                     <a href="#" class="header__link">Цены</a>
-                    <a href="#" class="header__link">Оформить заказ</a>
+                    <a href="#" class="header__link order__scroll" data-scroll="#order">Оформить заказ</a>
                 </nav>
                 <div class="header__burger">
                     <div></div>
@@ -35,7 +34,6 @@
             </div>
         </div>
     </header>
-
     <section class="loremBlock">
         <div class="container">
             <div class="loremBlock__inner">
@@ -52,18 +50,17 @@
                     <li class="loremBlock__item">Sed ut perspiciatis, unde omnis iste natus error</li>
                 </ul>
                 <div class="loremBlock__buttons">
-                    <button class="loremBlock__button loremBlock__order">заказать</button>
+                    <button class="loremBlock__button loremBlock__order order__scroll" data-scroll="#form">заказать</button>
                     <button class="loremBlock__button loremBlock__desc">подробнее</button>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="order">
+    <section class="order" id="order">
         <div class="container">
             <div class="order__inner">
                 <h1 class="order__title">
-                    Оформление  <span>Заказа</span>
+                    Оформление <span>Заказа</span>
                 </h1>
                 <p class="order__subtitle">
                     Перед заполнением формы ознакомьтесь с нашей схемой работы!
@@ -71,7 +68,7 @@
                 <div class="order__icons">
                     <div class="order__item">
                         <div class="order__icon">
-                            <img src="images/icon1.png" alt="">
+                            <img loading="lazy" src="images/icon1.png" alt="loupe">
                         </div>
                         <div class="order__desc">
                             Lorem ipsum dolor sit amet
@@ -79,7 +76,7 @@
                     </div>
                     <div class="order__item">
                         <div class="order__icon">
-                            <img src="images/icon2.png" alt="">
+                            <img loading="lazy" src="images/icon2.png" alt="percent">
                         </div>
                         <div class="order__desc">
                             Сonsecteturadipiscing elit
@@ -87,7 +84,7 @@
                     </div>
                     <div class="order__item">
                         <div class="order__icon">
-                            <img src="images/icon3.png" alt="">
+                            <img loading="lazy" src="images/icon3.png" alt="document">
                         </div>
                         <div class="order__desc">
                             Sed do eiusmod tempor
@@ -95,7 +92,7 @@
                     </div>
                     <div class="order__item">
                         <div class="order__icon">
-                            <img src="images/icon4.png" alt="">
+                            <img loading="lazy" src="images/icon4.png" alt="mail">
                         </div>
                         <div class="order__desc">
                             Esse cillum dolore
@@ -104,7 +101,7 @@
                     </div>
                     <div class="order__item">
                         <div class="order__icon">
-                            <img src="images/icon5.png" alt="">
+                            <img loading="lazy" src="images/icon5.png" alt="money">
                         </div>
                         <div class="order__desc">
                             Excepteur sint occaecat cupidatat non proident
@@ -112,10 +109,10 @@
                     </div>
                 </div>
                 <div class="order__block">
-                    <form action="#" class="order__form">
+                    <form action="#" class="order__form" id="form">
                         <div class="order__row">
                             <div class="order__select">
-                                <select>
+                                <select name="select-inp">
                                     <option value="0" disabled selected>Выберите тип системы</option>
                                     <option value="1">Sed ut perspiciatis</option>
                                     <option value="2">Nemo enim ipsam</option>
@@ -126,8 +123,8 @@
                                     <option value="7">Itaque earum rerum</option>
                                 </select>
                             </div>
-                            <input type="email" class="order__email order__input" placeholder="Ваш e-mail">
-                            <input type="test" class="order__name order__input" placeholder="Ваше имя">
+                            <input type="email" name="email-inp" class="order__email order__input" placeholder="Ваш e-mail">
+                            <input type="test" name="name-inp" class="order__name order__input" placeholder="Ваше имя">
                         </div>
                         <div class="order__row">
                             <div class="order__bar">
@@ -142,9 +139,9 @@
                                 <input type="range" class="order__range" value="75" max="100" min="0">
                             </div>
                             <div class="order__wrapper">
-                            <input name="file" type="file" name="file" id="order__file" class="order__file" multiple>
+                            <input name="file-inp" type="file" id="order__file" class="order__file" multiple>
                             <label for="order__file" class="order__file_button">
-                               <span class="order__file_icon_wrapper"><img class="order__file_icon" src="images/file.png" alt="Прикрепить файл"></span>
+                               <span class="order__file_icon_wrapper"><img loading="lazy" class="order__file_icon" src="images/file.png" alt="Прикрепить файл"></span>
                                <span class="order__file_button_text">Прикрепить файл</span>
                             </label>
                          </div>
@@ -155,15 +152,48 @@
                             </div>
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>
     </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__col">
+                  <p class="footer__desc"><span>© 2018 «LoremIpsum.net»</span>&nbsp;Все права защищены.</p>
+                </div>
+                <div class="footer__col">
+                  <div class="footer__wallets">
+                    <div class="footer__item footer__wallet">
+                      <div class="footer__icon"><img loading="lazy" src="images/qiwi.png" alt="qiwi"></div>
+                      <div class="footer__name">Qiwi wallet</div>
+                    </div>
+                    <div class="footer__item footer__wallet">
+                      <div class="footer__icon"><img loading="lazy" src="images/yMoney.png" alt="Yandex Money"></div>
+                      <div class="footer__name">Yandex Money</div>
+                    </div>
+                    <div class="footer__item footer__wallet">
+                      <div class="footer__icon"><img loading="lazy" src="images/wMoney.png" alt="Web Money"></div>
+                      <div class="footer__name">Web Money</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer__col">
+                  <a class="footer__item footer__social" href="mailto:info@ipsum228.com">
+                    <div class="footer__icon"><img loading="lazy" src="images/mail.png" alt="mail"></div>
+                    <div class="footer__name">info@ipsum228.com</div>
+                  </a>
+                  <a class="footer__item footer__social" href="#">
+                    <div class="footer__icon"><img loading="lazy" src="images/vk.png" alt="vk"></div>
+                    <div class="footer__name">Мы вконтакте</div>
+                  </a>
+                </div>
+              </div>
+        </div>
+    </footer>
   </div>
-
-  <script src="js/jquery-3.6.0.min.js"></script>
-  <script src="js/select.js"></script>
-  <script src="js/script.js"></script>
+  <script type="module" src="js/jquery-3.6.0.min.js"></script>
+  <script type="module" src="js/select.js"></script>
+  <script type="module" src="js/script.js"></script>
 </body>
 </html>
